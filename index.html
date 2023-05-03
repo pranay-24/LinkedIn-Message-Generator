@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>        
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<p id="main-heading">LinkedIn Connection Message Generator</p>
+<p>LinkedIn Connection Message generator is an app to generate text messages which could be copied and used on LinkedIn to send connection requests.First the users enter their own information like name, college name,program name and save it. Then from the options ,they can choose which type of message they want to generate. The user can hover over options to know more about them. Text utility tools like clear,copy and trim white spaces is also provided. </p>
+<section >
+<div id="u_form">
+<p>User Information:</p>
+
+<!-- //Section for displaying user information -->
+<section id="userDetail">
+<p>Name: <span id="heading_name"></span>  Program Name: <span id="heading_program"></span>  College Name: <span id="heading_college"></span></p>
+
+</section>
+<!-- //form to input user information -->
+<form name ="userForm" action="" method="POST">
+<label for="f_name">Name</label>
+<input required type="text" name="f_name" >
+<label for="f_pname">Program Name</label>
+<input required type="text" name="f_pname">
+<label for="f_cname">College Name</label>
+<input required type="text" name="f_cname">
+<input type="submit" value="Save Details" class="generateText">
+
+
+</form>
+
+</div>
+</section>
+
+<section>
+ <div>
+    <textarea name="" id="txtArea" cols="30" rows="10"  ></textarea>
+ </div>   
+<!-- //text Utility tools -->
+<button onclick="txtTrim()" class="generateText">Trim space</button>
+<button onclick="txtCopy()" class="generateText">Copy to clipboard</button>
+<button onclick="txtClear()" class="generateText">Clear</button>
+</section>
+<section >
+<div id="text_util">
+
+    <p >
+        <span id="tname"></span>
+        <span id="tcname"></span>
+        <span id="tpname"></span>
+     </p>  
+</div>
+ 
+</section>
+
+<section>
+<fieldset >
+<legend>Message Options</legend>
+<div id="containerOptions">
+    
+<div class="opt">
+<label for="normalConnection">General Request</label>
+<input type="checkbox" name="normalConnection" id="normalConnection" />
+</div>
+
+<div class="opt">
+<label for="Senior_person">Senior Professional</label>
+<input type="checkbox" name="Senior_person" id="Senior_person" />
+</div>
+
+<div class="opt">
+<label for="recruiter">Recruiter</label>
+<input type="checkbox" name="recruiter" id="recruiter" />
+</div>
+
+<div class="opt">
+<label for="courseSelect">Course Selection</label>
+<input type="checkbox" name="courseSelect" id="courseSelect" />
+</div>
+
+<div class="opt">
+<label for="followUp">Follow Up Question</label>
+<input type="checkbox" name="followUp" id="followUp" />
+</div>
+
+
+</div>
+<!-- //form to enter Senior professional details -->
+<form name="SP_form" id="SP_form" style="display:none">
+<label for="SP_fieldName">Area of Expertise</label>
+<input required type="text" name="SP_fieldName" id="SP_fieldName" />
+
+<!-- <button onclick="f5()">Generate Text</button> -->
+<input type="submit" value="Generate Text" class="generateText">
+</form>
+
+<!-- //form to enter recruiter details for asking internship -->
+<form name = "recruiter_form" id="recruiter_form" style="display:none">
+<label for="R_companyName">Company name</label>
+<input required type="text" name="R_companyName" id="R_companyName" />
+
+<label for="R_jobRole">Job Role</label>
+<input required type="text" name="R_jobRole" id="R_jobRole" /> 
+
+<!-- <button onclick="f1()">Generate Text</button> -->
+<input type="submit" value="Generate Text" class="generateText">
+</form>
+
+<!-- form to enquire about a second course -->
+<form name="college_form" id="college_form" style="display:none">
+<label for="C_collegeName">Connection's College Name</label>
+<input  required type="text" name="C_collegeName" id="C_collegeName" />
+
+<label for="C_progName">Connection's Program Name</label>
+<input required type="text" name="C_progName" id="C_progName" /> 
+
+<!-- <button onclick="f2()">Generate Text</button> -->
+<input type="submit" value="Generate Text" class="generateText">
+</form>
+
+<div id="follow_form" style="display:none">
+
+<button onclick="f3()" class="generateText">Generate Text</button>
+</div>
+
+<!-- //form to generate a general request -->
+<form name="connection_form" id="connection_form" style="display:none">
+
+<label for="CF_jobRoleSelect">Connection's job role</label>
+<input required type="text" name="CF_jobRole" id="CF_jobRole"  />  
+
+<label for="CF_sameCollegeSelect">Same College?</label>
+<input type="checkbox" name="CF_sameCollegeSelect" id="CF_sameCollegeSelect"  /> 
+
+
+<label for="CF_companyNameSelect">Connection's Company </label>
+<input type="checkbox" name="CF_companyNameSelect" id="CF_companyNameSelect" />
+<input type="text" name="CF_companyName" id="CF_companyName" style="display:none"/>
+<!-- <button onclick="f4()">Generate Text</button> -->
+<input type="submit" value="Generate Text" class="generateText">
+</form>
+
+
+
+
+</div>
+</fieldset>
+</section>
+<script src="main.js"></script>  
+</body>
+</html>

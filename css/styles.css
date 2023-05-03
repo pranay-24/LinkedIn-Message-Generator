@@ -1,0 +1,86 @@
+body{background-color: whitesmoke;
+
+}
+
+.generateText{
+background-color:#0d6efd;
+color:white;
+border-radius:3px;
+} 
+
+#u-form{
+background-color: cornflowerblue;
+}
+
+#text-util{
+background-color: whitesmoke;
+}
+
+.txt-msg{
+display:none;
+}
+
+#idScollege{
+    display:none;
+}
+#userDetail span{
+font-size: 0.8em;
+font-weight:300 ;
+
+}
+
+/* #userDetail p{
+font-size: 1.3em;
+font-weight:300 ;
+
+} */
+#userDetail{
+line-height:0.7em;
+}
+#txtArea{
+    border:2px solid black;
+    width:80%;
+    margin:20px;
+    height:80px;
+}
+#main-heading{
+font-size:1.5em ;
+font-weight:700 ;
+color:black;
+text-align: center;
+}
+#containerOptions{
+display:flex;
+gap:40px;
+padding-bottom:15px;
+}
+#SP_form>*{
+padding:0px 15px;
+gap:40px;
+}
+#recruiter_form>*{
+/* gap:40px; */
+padding:0px 15px;
+/* background-color: bisque; */
+}
+
+#college_form>*{
+padding:0px 15px;
+}
+
+#connection_form>*{
+padding:0px 15px;
+}
+#u_form p{
+font-size:1.2em ;
+font-weight:700 ;
+
+}
+input:required:invalid {
+    border: 1px solid red;
+  }
+
+input:valid {
+  border: 1px solid black;
+}
+
